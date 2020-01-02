@@ -4,16 +4,16 @@ def map(arr)
   
   while i < arr.size do
     newArr[i] = yield(arr[i])   
-    i+=1
+    i += 1
   end
   newArr
 end
 
 def reduce(arr, start_opt = nil)
-  if start_opt  # If the optional starting point is true, make the return array equal to that
+  if start_opt  
     return_arr = start_opt
     i = 0
-  else  # if no starting point, then start from 0
+  else  
     return_arr = arr[0]
     i = 1
   end
@@ -23,5 +23,4 @@ def reduce(arr, start_opt = nil)
     i += 1
   end
   return_arr
-  
 end
